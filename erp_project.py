@@ -1,5 +1,5 @@
-import tkinter
+from tkinter import *
 
-window = tkinter.Tk()
+root = Tk()
 
-window.mainloop()
+root.mainloop()
