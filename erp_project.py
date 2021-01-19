@@ -3,7 +3,11 @@ from tkinter import *
 
 root = Tk()
 root.title("formongde")
+<<<<<<< HEAD
 root.geometry("1200x700")
+=======
+root.geometry("640x400")
+>>>>>>> 62a5652f23d73b1add5deb3af2d1e9c1938fcb79
 root.resizable(True, True)
 
 #노트북 생성
@@ -35,4 +39,9 @@ page_4 = tkinter.Label(frame4, text = "내용을 입력하세요")
 page_4.pack()
 
 
+<<<<<<< HEAD
 root.mainloop()
+=======
+root.mainloop()
+
+>>>>>>> 62a5652f23d73b1add5deb3af2d1e9c1938fcb79
