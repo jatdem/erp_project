@@ -13,8 +13,12 @@ notebook.pack(fill = "both")
 frame1 = tkinter.Frame(root)
 notebook.add(frame1, text = "page1")
 
-page_1 = tkinter.Label(frame1, text = "내용을 입력하세요")
-page_1.pack()
+frame1_1 = Frame(frame1)
+frame1_1.pack()
+
+odsearch = Entry(frame1_1, text = "주문검색")
+odsearch.pack()
+
 #페이지2(원주문서)
 frame2 = tkinter.Frame(root)
 notebook.add(frame2, text = "page2")
@@ -36,4 +40,3 @@ page_4.pack()
 
 
 root.mainloop()
-
