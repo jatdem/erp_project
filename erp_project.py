@@ -3,7 +3,7 @@ from tkinter import *
 
 root = Tk()
 root.title("formongde")
-root.geometry("640x400")
+root.geometry("1200x700")
 root.resizable(True, True)
 
 #노트북 생성
