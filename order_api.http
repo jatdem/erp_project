@@ -1,0 +1,2 @@
+GET http://playauto-api.playauto.co.kr/emp/v1/orders
+X-API-KEY: 0805a02bb9f1318cef8da503a4b7e05c
