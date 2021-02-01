@@ -1,2 +1,15 @@
-GET http://playauto-api.playauto.co.kr/emp/v1/orders
+GET http://playauto-api.playauto.co.kr/emp/v1/orders/?page=2
 X-API-KEY: 0805a02bb9f1318cef8da503a4b7e05c
+
+{
+"states": {
+    "startDate": "",
+    "endDate": "",
+    "page": "3",
+    "count": "100",
+    "MasterCode": "",
+    "ProdCode": "",
+    "tel": ""
+},
+"statesYn": "N"
+}
