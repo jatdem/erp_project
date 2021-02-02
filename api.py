@@ -1,5 +1,8 @@
+# coding=<utf-8>
+#PS C:\Users\com\Desktop\erp_project>  (경로)
 import requests
 from pprint import pprint
+import pandas as pd
 
 url = "http://playauto-api.playauto.co.kr/emp/v1/orders/?count=1000"
 #주문 100건 이상 나오게 하는 방법: 주소 뒤에 /? 추가 하고 파라미터(body sheme 추가)
@@ -12,8 +15,16 @@ headers = {
  
 response = requests.request("GET", url, headers=headers, params=querystring)
 res_json = response.json()
-pprint(res_json)
 
+df = pd.json_normalize(res_json)
+df.columns = ["고유번호","사이트코드","사이트","아이디","사용자","수집일","주문일","결제일","송장전송일","상태변경일","정산예정일","상태","주문번호","상품코드","상품명","옵션명","옵션가","추가옵션","추가옵션가","원가","공급가","판매가","수량","배송방법","배송비","주문자아이디","주문자","주문자전화번호","주문자핸드폰","주문자이메일","수령자","수령자영문이름","수령자전화번호","수령자핸드폰","수령자우편번호","수령자주소","배송메세지","배송사","송장번호","마스터상품코드","판매자상품코드","기타메세지","주문자아이디","고객아이디","사은품","수령자주민등록번호(통관용)","그룹키"]
+# df.columns = df.columns.str.replace("Number","db번호") #컬럼명 바꾸기
+df1 = df.drop({"고유번호","사이트코드"},axis = "columns")
+
+# df = pd.DataFrame()
+# print(pd.json_normalize(res_json)) #json 데이터 ->데이터프레임 변환
+print(df1)
+# pprint(res_json)
 # pprint(response.text)
 
 # with open("apitest.html", "w", encoding="utf-8") as f:
