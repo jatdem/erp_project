@@ -2,9 +2,8 @@
 import requests
 from pprint import pprint
 import pandas as pd
-
-url = "http://playauto-api.playauto.co.kr/emp/v1/orders"
 #주문 100건 이상 나오게 하는 방법: 주소 뒤에 /? 추가 하고 파라미터(body sheme 추가)
+url = "http://playauto-api.playauto.co.kr/emp/v1/orders"
 
 querystring = {"count":"10"}
 headers = {
