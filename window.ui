@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
-    <height>637</height>
+    <width>1113</width>
+    <height>908</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,17 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>0</y>
-      <width>921</width>
-      <height>620</height>
+      <width>1111</width>
+      <height>881</height>
      </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -34,24 +40,30 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>921</width>
-        <height>601</height>
+        <y>200</y>
+        <width>1101</width>
+        <height>651</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Sunken</enum>
       </property>
       <widget class="QScrollBar" name="verticalScrollBar">
        <property name="geometry">
         <rect>
-         <x>830</x>
-         <y>3</y>
+         <x>1080</x>
+         <y>0</y>
          <width>16</width>
-         <height>491</height>
+         <height>631</height>
         </rect>
        </property>
        <property name="orientation">
@@ -62,13 +74,302 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>500</y>
-         <width>831</width>
+         <y>630</y>
+         <width>1081</width>
          <height>20</height>
         </rect>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>검색</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>7</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>33</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>날짜</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>7</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>검색</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>731</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>71</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>전체보기</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>10</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>신규주문</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>46</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>주문확인</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>80</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>보류</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>46</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>송장입력</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>10</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>송장출력</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>80</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>출고</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>10</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>배송중</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>46</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>수취확인</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>80</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>정산완료</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>10</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>취소</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>46</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>반품요청</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_14">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>80</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="tabletTracking">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>교환요청</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_15">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>10</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>취소마감</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>46</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>반품마감</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_17">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>80</y>
+         <width>57</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>교환마감</string>
        </property>
       </widget>
      </widget>
@@ -78,6 +379,53 @@
       <string>주문서정리</string>
      </attribute>
      <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>1101</width>
+        <height>831</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QScrollBar" name="verticalScrollBar_2">
+       <property name="geometry">
+        <rect>
+         <x>1080</x>
+         <y>0</y>
+         <width>16</width>
+         <height>810</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QScrollBar" name="horizontalScrollBar_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>812</y>
+         <width>1080</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>송장정리</string>
+     </attribute>
+     <widget class="QFrame" name="frame_3">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -92,7 +440,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QScrollBar" name="verticalScrollBar_2">
+      <widget class="QScrollBar" name="verticalScrollBar_3">
        <property name="geometry">
         <rect>
          <x>900</x>
@@ -105,7 +453,7 @@
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
-      <widget class="QScrollBar" name="horizontalScrollBar_2">
+      <widget class="QScrollBar" name="horizontalScrollBar_3">
        <property name="geometry">
         <rect>
          <x>0</x>
