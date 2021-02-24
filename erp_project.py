@@ -18,7 +18,8 @@ frame1_1.pack()
 
 odsearch = Entry(frame1_1, text = "주문검색")
 odsearch.pack()
-
+odlabel = Label(frame1_1, text = "주문검색")
+odlabel.pack()
 #페이지2(원주문서)
 frame2 = tkinter.Frame(root)
 notebook.add(frame2, text = "page2")
