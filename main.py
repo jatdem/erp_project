@@ -39,7 +39,7 @@ ntb.pack(fill="both")
 
 # ntb = ttk.Notebook()
 
-# 홈 프레임1의 내용
+# ==================================홈 프레임1의 내용===================================
 frame1 = Frame(root, relief="solid", bd=1)
 frame1.pack(fill="both", expand=True)
 ntb.add(frame1, text='홈')
@@ -54,7 +54,7 @@ td_od_lb2.grid(row=2, column=1)
 td_od_lb3 = Label(od_box, text="33,402,600 원")
 td_od_lb3.grid(row=3, column=1)
 
-# 주문관리 frame2의 내용
+#==================================주문관리 프레임2의 내용===================================
 frame2 = Frame(root, relief="solid", bd=1)
 frame2.pack(fill="both", expand=True)
 ntb.add(frame2, text="주문관리")
@@ -119,43 +119,56 @@ od_frame.place(x=170, y=100, width=1738)
 ent_order_pt = Table(od_frame, dataframe=df1)  # 주문 데이터프레임 출력
 ent_order_pt.show()
 
-# 재고관리 frame3의 내용
+#==================================재고관리 프레임3의 내용===================================
 frame3 = Frame(root, relief="solid", bd=1)  # 프레임3 생성
 frame3.pack(fill="both", expand=True)
 ntb.add(frame3, text="재고관리")
 
-stock_frame = LabelFrame(frame3)  # 라벨프레임 생성
-stock_frame.place(x=155, width=1800, height=1000)
+stock_list = Listbox(frame3, selectmode='extended') # 재고버튼 리스트박스(프레임)
+stock_list.pack(side="left", fill="y")
 
-menu_tv = ttk.Treeview(frame3)  # 트리뷰 생성
-menu_tv.place(width=150)
+stock_frame = LabelFrame(frame3)  # 라벨프레임 생성     # stock_frame = LabelFrame(frame3)  # 라벨프레임 생성
+stock_frame.pack(fill="both")                          # stock_frame.place(x=145, width=1850, height=1000)                             
+                                                                                    
+def stock_table():  # 재고표 라벨프레임에 출력해주는 함수
+    lb = Label(stock_frame, text="text example")
+    lb.pack()
+
+stock_button1 = Button(stock_list, text="완제품재고", command=stock_table) # 재고버튼생성
+stock_button2 = Button(stock_list, text="원단재고")
+stock_button3 = Button(stock_list, text="협력업체재고")
+# stock_button4 = Button(frame3, text="")
+# stock_button5 = Button(frame3, text="")
+stock_button1.place(x=2, y=4)  # 버튼좌표 설정 시작
+stock_button2.place(x=2, y=34)
+stock_button3.place(x=2, y=64)
+
+# def stock_table():  # 재고표 라벨프레임에 출력해주는 함수
+#     pass
 
 
-def stock_table(event):  # 재고표 라벨프레임에 출력해주는 함수
-    pass
 
+# menu_tv.bind("<ButtonRelese-1>", stock_table) # 트리뷰 클릭시 재고출력 바인딩
 
-menu_tv.insert('', '0', 'item1', text="완제품 재고")
-menu_tv.insert('', '1', 'item2', text="원단재고")
-menu_tv.insert('', '2', 'item3', text="일자별 판매량")
-menu_tv.insert('', '3', 'item4', text="외주")
-menu_tv.insert('', '4', 'item5', text="비고1")
-menu_tv.insert('', '5', 'item6', text="비고2")
-
-# 택배관리 프레임4의 내용
+#==================================택배관리 프레임4의 내용===================================
 frame4 = Frame(root, relief="solid", bd=1)
 frame4.pack(fill="both", expand=True)
 ntb.add(frame4, text="택배관리")
 
-dilivery_tv = ttk.Treeview(frame4)  # 택배관리 트리뷰 생성
-dilivery_tv.place(width=150)
-dilivery_tv.insert('', '0', 'item1', text="출고")
-dilivery_tv.insert('', '1', 'item2', text="송장")
-dilivery_tv.insert('', '2', 'item3', text="비고1")
-dilivery_tv.insert('', '3', 'item4', text="비고2")
-dilivery_tv.insert('', '4', 'item5', text="비고3")
-dilivery_tv.insert('', '5', 'item6', text="비고4")
-# menu_tv.bind("<ButtonRelese-1>", stock_table) # 트리뷰 클릭시 재고출력 바인딩
+delivery_list = Listbox(frame4, selectmode='extended') # 재고버튼 리스트박스(프레임)
+delivery_list.pack(side="left", fill="y")
+
+delivery_frame = LabelFrame(frame4)  # 라벨프레임 생성     # stock_frame = LabelFrame(frame3)  # 라벨프레임 생성
+delivery_frame.pack(fill="both")                          # stock_frame.place(x=145, width=1850, height=1000)                                                                                                             
+
+delivery_button1 = Button(delivery_list, text="출고", command=stock_table) # 재고버튼생성
+delivery_button2 = Button(delivery_list, text="송장")
+delivery_button3 = Button(delivery_list, text="비고")
+# stock_button4 = Button(frame3, text="")
+# stock_button5 = Button(frame3, text="")
+delivery_button1.place(x=2, y=4)  # 버튼좌표 설정 시작
+delivery_button2.place(x=2, y=34)
+delivery_button3.place(x=2, y=64)
 
 
 root.mainloop()
