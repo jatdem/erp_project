@@ -23,18 +23,26 @@ order = pd.read_excel("문자바꾸기.xlsx","주문서", na_values=[""])
 
 # df1[df1["A"]==i].B.values
 def rep_order():
+    # global lb
+    new_df = pd.DataFrame({"제품명":[]})
     # og_prodname = 0
     for i in order.제품명:
-        fd = i.replace(i,str(change[change["찾을문자"]==i].바꿀문자.values))
-        print(fd)
+        fd = pd.DataFrame({"제품명":[i.replace(i,str(change[change["찾을문자"]==i].바꿀문자.values))]})
+        return new_df.append(fd)
+    print(new_df)    
 
-i = order.iloc[0,0]
-fd = i.replace(i,str(change[change["찾을문자"]==i].바꿀문자.values))
-df = pd.DataFrame()
-print(df)
-# root = Tk()
+rep_order()
 
+root = Tk()
 
 
+lb = Label(root, text=order)
+lb.pack()
 
-# root.mainloop()
+
+btn = Button(root, text="button", command=rep_order)
+btn.pack()
+
+
+
+root.mainloop()
